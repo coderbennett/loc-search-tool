@@ -1,18 +1,48 @@
+var homeSearchFormEl = $('#searchInput');
+var homeSelect = $('#Select');
+var homeText = $('#TextInput');
+
 //create global scope of variable to ref elem
-//link api
 
 //start with homepage 
+function switchPage(event) {
+    event.preventDefault();
+    var textIn = homeText.val();
+    var selectIn = homeSelect.val();
+    var selectOut;
+
+    switch(selectIn) {
+        case "Maps": 
+            selectOut = "maps";
+            break;
+        case "Audio Recordings": 
+            selectOut = "audio";
+            break;
+        case "Photo, Print, Drawing": 
+            selectOut = "photos";
+            break;
+        case "Manuscripts/Mixed Material": 
+            selectOut = "manuscripts";
+            break;
+        case "Newspapers": 
+            selectOut = "newspapers";
+            break;
+        case "Film, Videos": 
+            selectOut = "film-and-videos";
+            break;
+        case "Printed Music, Sheet Music": 
+            selectOut = "notated-music";
+            break;
+        case "Archived Websites": 
+            selectOut = "websites";
+            break;
+        default: 
+            selectOut = "";
+            break;
+    }
+
+    document.location = "./results.html?q=" + textIn + "&format=" + selectOut;
+}
 
 //redirect to new page when on.click search
-
-// <!-- section for the search results- DONE VIA JAVASCRIPT(Lines 18-22) -->
-//         <!-- contains div with- show 10 results -->
-//         <!-- h2 -->
-//         <!-- date-->
-//         <!--subjects -->
-//         <!-- description -->
-//         <!-- read more-link to article -->
-
-//on.click search dont switch pages
-
-// on.click back to redirect to landing page
+homeSearchFormEl.on("submit", switchPage);
