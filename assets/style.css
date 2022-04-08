@@ -1,0 +1,22 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: blueviolet;
+}
+
+form {
+    margin: auto;
+    position: absolute;
+    top: 35%;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    background-color: aqua;
+}
+
+button {
+    width: 95%;
+}
+
