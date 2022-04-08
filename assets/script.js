@@ -7,7 +7,7 @@ var homeText = $('#TextInput');
 //start with homepage 
 function switchPage(event) {
     event.preventDefault();
-    var textIn = homeText.val();
+    var textIn = homeText.val().replace(" ", "+");
     var selectIn = homeSelect.val();
     var selectOut;
 
@@ -37,7 +37,7 @@ function switchPage(event) {
             selectOut = "websites";
             break;
         default: 
-            selectOut = "";
+            selectOut = "search";
             break;
     }
 
