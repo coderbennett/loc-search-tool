@@ -1,12 +1,11 @@
-
-body {
+#searchBody {
     display: flex;
     justify-content: center;
     align-content: center;
     background-color: blueviolet;
 }
 
-form {
+#searchInput {
     margin: auto;
     position: absolute;
     top: 35%;
@@ -20,3 +19,6 @@ button {
     width: 95%;
 }
 
+.sideBar {
+    background-color: darkorange;
+}
