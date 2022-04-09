@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-<body class="row">
+<body id="resultsBody" class="row">
 
     <!-- section for the side bar -->
     <!-- search container -->
@@ -18,7 +18,7 @@
     <!-- form-populate the search to the next html  and the search button-->
     <form class="col-sm-3 sideBar" id="resultsForm">
         <fieldset enabled>
-            <legend>Library of Congress Search Engine </legend>
+            <legend class="text-light">Library of Congress Search Engine </legend>
             <div class="mb-3 mx-1">
                 <input type="text" id="TextInput" class="form-control" placeholder="Search!">
             </div>
@@ -35,12 +35,12 @@
                       <option>Archived Websites</option>
                     </select>
             </div>
-            <button type="submit" class="btn btn-primary m-1">Click Me</button>
+            <button type="submit" class="btn btn-dark m-1">Click Me</button>
             <button id="backBtn" type="#" class="btn btn-danger m-1">Back</button>
         </fieldset>
     </form>
 
-    <section id="resultSection" class="col-9">
+    <section id="resultSection" class="col-9 text-light">
 
     </section>
 
